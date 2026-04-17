@@ -1,0 +1,29 @@
+/**
+ * ERP Design System — CSS Custom Properties
+ * 來源：ERP-System/.claude/rules/figma-design-system/references/tokens.md
+ * Tailwind 的 theme.extend.colors 已定義主要 token，
+ * 此處僅定義 Tailwind 無法直接表達的語義變數。
+ */
+
+@layer base {
+  :root {
+    /* ── Semantic Surface ──────────────────────────── */
+    --surface-default: #f8fafc;
+    --surface-raised:  #ffffff;
+    --surface-overlay: rgba(0,0,0,0.5);
+
+    /* ── Semantic Text ────────────────────────────── */
+    --text-primary:   #0f172a;
+    --text-secondary: #3c4a5b;
+    --text-disabled:  #7f8996;
+
+    /* ── Semantic Border ──────────────────────────── */
+    --border-default: #d7dae0;
+    --border-focus:   #2877ee;
+
+    /* ── Warning Banner ──────────────────────────── */
+    --status-warning-bg:   #fff4d6;
+    --status-warning-icon: #f79009;
+    --status-warning-text: #422a00;
+  }
+}

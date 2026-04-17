@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+@import './variables.css';
+
+@config '../../tailwind.config.ts';
+
+/*
+ * Syncfusion 元件保護層
+ * Tailwind v4 preflight 的 `border: 0 solid; margin: 0; padding: 0`
+ * 會破壞 Syncfusion Material theme 的邊框與間距。
+ */
+.e-control,
+.e-control *,
+.e-control ::before,
+.e-control ::after {
+  border: revert;
+  margin: revert;
+  padding: revert;
+}
+
+/*
+ * Syncfusion 主題色覆寫 — 對齊 ERP Design System primary-500 (#2877ee)
+ * Syncfusion Material theme 預設 accent 非品牌色，需手動覆寫。
+ */
+
+/* Primary Button */
+.e-btn.e-primary,
+.e-css.e-btn.e-primary {
+  background-color: #2877ee;
+  border-color: #2877ee;
+  color: #fff;
+}
+.e-btn.e-primary:hover,
+.e-css.e-btn.e-primary:hover {
+  background-color: #1d68e0;
+  border-color: #1d68e0;
+}
+.e-btn.e-primary:focus,
+.e-css.e-btn.e-primary:focus {
+  background-color: #1d68e0;
+  border-color: #1d68e0;
+  box-shadow: 0 0 0 3px rgba(40, 119, 238, 0.3);
+}
+
+/* Outline Button */
+.e-btn.e-outline {
+  border-color: #7f8996;
+  color: #0f172a;
+}
+.e-btn.e-outline:hover {
+  background-color: #f3f4f6;
+}
+
+/* DropDownList / Input focus accent */
+.e-input-group:not(.e-disabled):not(.e-float-icon-left)::before,
+.e-input-group:not(.e-disabled):not(.e-float-icon-left)::after,
+.e-input-group.e-input-focus::before,
+.e-input-group.e-input-focus::after {
+  background: #2877ee;
+}
+
+/* Grid selection & focus accent */
+.e-grid .e-selectionbackground {
+  background-color: rgba(40, 119, 238, 0.08);
+}
+.e-grid .e-headercell {
+  font-weight: 500;
+}
+
+/* Pager accent */
+.e-pager .e-currentitem {
+  background-color: #2877ee;
+  border-color: #2877ee;
+}
+
+/* Checkbox accent */
+.e-checkbox-wrapper .e-frame.e-check {
+  background-color: #2877ee;
+  border-color: #2877ee;
+}

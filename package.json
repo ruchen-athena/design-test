@@ -1,0 +1,32 @@
+{
+  "name": "pms-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@syncfusion/ej2-vue-buttons": "^30.0.0",
+    "@syncfusion/ej2-vue-calendars": "^30.0.0",
+    "@syncfusion/ej2-vue-dropdowns": "^30.0.0",
+    "@syncfusion/ej2-vue-grids": "^30.0.0",
+    "@syncfusion/ej2-vue-inputs": "^30.0.0",
+    "@syncfusion/ej2-vue-layouts": "^30.0.0",
+    "@syncfusion/ej2-vue-navigations": "^30.0.0",
+    "@syncfusion/ej2-vue-notifications": "^30.0.0",
+    "@syncfusion/ej2-vue-popups": "^30.0.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^22.0.0",
+    "nuxt": "^4.2.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.22",
+    "vue-tsc": "^3.1.2"
+  }
+}
