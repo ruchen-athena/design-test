@@ -31,8 +31,12 @@ jobs:
       - name: Generate static site
         run: npm run generate
 
-      - name: Add .nojekyll
-        run: touch .output/public/.nojekyll
+      - name: Add .nojekyll and SPA fallback
+        run: |
+          touch .output/public/.nojekyll
+          # GH Pages serves 404.html for unknown paths; overwrite with the SPA
+          # shell so client-side router can handle dynamic routes like /pms/folio/:id
+          cp .output/public/index.html .output/public/404.html
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4

@@ -44,5 +44,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   devServer: { port: 3100 },
 
+  nitro: {
+    prerender: {
+      routes: [
+        '/pms/folio/new',
+        '/pms/reservation/new',
+      ],
+    },
+  },
+
   compatibilityDate: '2024-08-14',
 })
